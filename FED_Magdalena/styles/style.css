@@ -1,0 +1,203 @@
+/**************/
+/* STYLING BEIDE PAGINA'S */
+/**************/
+
+@font-face {
+	font-family: 'BasicCommercial';
+	src: url('path/to/basiccommercial_i4.1e3523a998a80ff2e6546b2cd001aec8a0856a1d.woff2') format('woff2'),
+		 url('path/to/basiccommercial_n4.161334af349df25a2cfd2ef229e3fe638b6471c6.woff2') format('woff2'),
+		 url('path/to/basiccommercial_n7.58fc15bd5b52101eea961dd8bc6882e199098b2d.woff2') format('woff2');
+  }
+  
+  @font-face {
+	font-family: 'Helvetica';
+	src: url('path/to/helvetica_n3.e01288c0d2e8e4f4101819b750499a38c41ed953.woff2') format('woff2'),
+		 url('path/to/helvetica_n4.fe093fe9ca22a15354813c912484945a36b79146.woff2') format('woff2');
+  }
+
+ /**************/
+/* CSS REMEDY */
+/**************/
+
+*, *::after, *::before {
+	box-sizing:border-box;  
+  }
+  
+  button, summary {
+	  cursor: pointer;
+  }
+  
+  img {
+	  max-width: 100%;
+	  height: auto;
+  }
+  
+  img, picture{
+	  display: block;
+  }
+  
+  ul, ol {
+	  margin: 0;
+	  padding: 0;
+  }
+  
+  
+  
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  
+  :root {
+	  /* LICHT THEMA */
+	  /* voor de tekst */
+	  --color-text:#111;
+	  --color-nav-text: #111;
+
+	  /* basiskleuren */
+	  --color-wit: #f3f3f3;
+	  --color-grijs: #ecebe9;
+  
+	  /* achtergrond kleur */
+	  --color-background:#f3f3f3;
+  
+	  /* hoverkleuren van de buttons */
+	  --color-hover-lichte-button: #404040;
+	  --color-hover-donkere-button:
+  }
+  
+  
+
+
+
+/****************/
+/*     BODY    */
+/****************/
+
+
+body{
+	background-color: var(--color-background);
+	font-family: 'BasicCommercial';
+	font-family: 'Helvetica';
+	margin: 0;
+	padding: 0;
+	
+}
+
+header{
+	font-family: 'BasicCommercial';
+	font-family: 'Helvetica';
+
+}
+
+
+/****************/
+/*    HEADER    */
+/****************/
+
+header {
+	display: flex;
+	align-items: center;
+	height: 118px;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	right: 0;
+  }
+  
+  header section {
+	background-color: var(--color-grijs);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 41px;
+	display: flex; 
+	justify-content: center; 
+	align-items: center;
+  }
+  
+  header section p {
+	font-family: 'Helvetica', sans-serif;
+	color: var(--color-text);
+  }
+  
+  nav {
+	position: relative;
+	top: 41px;
+	display: flex;
+	align-items: center;
+	height: 77px;
+	width: 100vw;
+	
+  }
+  
+  nav ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	text-align: center;
+  }
+  
+  nav li {
+	margin-right: 20px;
+  }
+  
+  nav a {
+	text-decoration: none;
+	color: var(--color-nav-text);
+  }
+  
+  nav a:hover {
+	color: var(--color-hover-lichte-button);
+  }
+  
+  main {
+	display: flex;
+	flex-direction: column; /* Plaats inhoud in een verticale kolom */
+	align-items: center; /* Horizontaal centreren van de inhoud */
+	justify-content: center; /* Verticaal centreren van de inhoud */
+	position: absolute;
+	top: 118px;
+	width: 100%; /* Volledige breedte van het scherm */
+	height: calc(100vh - 118px); /* Hoogte vanaf de bovenkant van het scherm minus headerhoogte */
+  }
+  
+  /* Stijl voor afbeeldingen binnen main */
+  main img {
+	max-width: 100%; /* Afbeeldingen schalen naar beschikbare breedte */
+	height: auto;
+	margin: 10px; /* Voeg wat ruimte tussen de afbeeldingen toe */
+  }
+  
+  /* Stijl voor tekst binnen main */
+  main h2 {
+	text-align: center; /* Tekst centreren */
+	font-size: 24px; /* Voorbeeldgrootte, pas aan zoals gewenst */
+	color: #333; /* Voorbeeldtekstkleur, pas aan zoals gewenst */
+  }
+  
+  /* Flexbox-stijlen om afbeeldingen als een rij weer te geven */
+  main {
+	display: flex;
+	flex-direction: column; /* Behoud de kolomindeling voor de hoofdkolom */
+	align-items: center;
+  }
+  
+  main img {
+	margin: 0; /* Verwijder de ruimte tussen de afbeeldingen */
+  }
+  
+  main img + img {
+	margin-top: 10px; /* Voeg ruimte toe tussen opeenvolgende afbeeldingen */
+  }
+
+    
+  
+  
+
+  
+
+
+
+
