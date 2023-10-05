@@ -1,31 +1,391 @@
 /**************/
+/* STYLING BEIDE PAGINA'S */
+/**************/
+
+/**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	border: 0;
+	margin: 0; 
 }
 
-
-
-
+button,
+summary {
+	cursor: pointer;
+}
 
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+/* fonts */
+@font-face {
+	font-family: 'basiccommericalItalic';
+	src: url('../fonts/basiccommercial_i4.1e3523a998a80ff2e6546b2cd001aec8a0856a1d.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'basiccommericalNormal';
+	src: url('../fonts/basiccommercial_n4.161334af349df25a2cfd2ef229e3fe638b6471c6.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'basiccommericalBold';
+	src: url('../fonts/basiccommercial_n7.58fc15bd5b52101eea961dd8bc6882e199098b2d.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'helveticaNormal';
+	src: url('../fonts/helvetica_n3.e01288c0d2e8e4f4101819b750499a38c41ed953.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'helveticaBold';
+	src: url('../fonts/helvetica_n4.fe093fe9ca22a15354813c912484945a36b79146.woff2') format('woff2');
+}
+
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	/* LICHT THEMA */
+	/* voor de tekst */
+	--color-text: #111;
+
+	/* basiskleuren */
+	--color-wit: #f3f3f3;
+	--color-grijs: #f8f8f8;
+	--color-divider:#e2e2e2;
+
+	/* achtergrond kleur */
+	--color-background: #fff;
+
+	/* hoverkleuren van de buttons */
+	--color-hover-lichte-button: #404040;
+	--color-hover-donkere-button:
+}
+
+/********************/
+/* ALGEMENE STIJLEN */
+/********************/
+body {
+	margin:0;
+	background-color:var(--color-background);
+	color:var(--color-text);
+  }
+
+/*------------------------------------------------------------------*/
+/*----------------------------Header--------------------------------*/
+/*------------------------------------------------------------------*/
+
+
+/* navigatie, menu en aanbiedingsbalk */
+header {
+	background-color: var(--color-background);
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	align-items: center;
+
+	padding-bottom: .6em;
+
+	/* maakt het mogelijk om aanbiedingsbalk te verdwijnen bij het scrollen */
+	position: sticky;
+	top: -2.1em;
+
+	border-bottom: 1px solid var(--color-divider);
+
+}
+
+/* Grijze balk | Top van de pagina*/
+header p {
+	background-color: var(--color-grijs);
+	font-family: 'basiccommericalNormal';
+	order: -100;
+	top: 0;
+	width: 100%;
+	font-size: small;
+	line-height: 2em;
+	text-align: center;
+	padding: 0.6em;
+}
+
+/* logo browhouse */
+header img {
+	width: 10.5em;
+	padding-top: .8em;
+}
+
+/* icoontjes | zoeken, account en winkelwagen */
+
+header nav:nth-of-type(2) ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+}
+
+header nav:nth-of-type(2) li {
+    display: inline-block; 
+    margin: 0;
+    padding: 0;
+	width: fit-content;
+	height: 20px;
+    margin-right: 10px; 
+}
+
+header nav:nth-of-type(2) img {
+    width: auto;
+    height: 20px;
 }
 
 
 
 
+/* menubutton */
+header button {
+    order: 3; /* Zorgt ervoor dat de button aan de rechterkant staat */
+    margin-left: auto; /* Plaats de button aan de rechterkant */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
-/****************/
-/* JOUW STYLING */
-/****************/
+	
 
-/* jouw code */
+header button img {
+	height: 100%;
+	width: 100%;
+
+}
+
+
+
+/* menu verborgen | mobiele weergave */
+header nav:nth-of-type(1) {
+	display: flex;
+	justify-content: space-between;
+	
+	position: fixed;
+
+	left: 0;
+	top: 0;
+	bottom: 0;
+
+	width: 100%;
+	max-width: 18.7em;
+
+
+	transform: translateX(-100%);
+
+	/* de sluit button (X) komt boven in te staan */
+	align-items: flex-start;
+}
+
+
+
+/* opmaak menu */
+header nav:nth-of-type(1) ul {
+	padding: 0;
+	margin-top: 3em;
+}
+
+header nav:nth-of-type(1) a {
+	font-family: 'basiccommericalNormal';
+	font-size: 10pt;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+header nav:nth-of-type(1) a:hover {
+	border: solid 1px var(--color-hover-lichte-button);
+
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+header nav:nth-of-type(1) li{
+	list-style: none;
+	text-align: center;
+
+	padding: 1em;
+}
+
+
+
+/* als er op de button gedrukt wordt verplaatst het verborgen gedeelte op het scherm (van links naar rechts) (mobiele weergave) */
+header nav:nth-of-type(1).actief{
+	transform: translateX(0%);
+}
+
+header nav:nth-of-type(1) a{
+	color: var(--color-text);
+}
+
+
+
+/* sluitbutton menu */
+header nav:nth-of-type(1) button{
+	order: 1;
+	position: static;
+	margin-top: .5em;
+
+	font-family: 'basiccommericalNormal';
+	text-transform: uppercase;
+	font-size: 20pt;
+	color: var(--color-text);
+}
+
+
+
+/* navigatie op desktop weergave */
+@media (min-width:60em) {
+
+
+	/* verwijdering van de padding zodat boven als onder evenveel witruimte heeft */
+	header {
+		padding-bottom: 0;
+	}
+
+
+	/* menubutton wordt verwijderd/onzichtbaar */
+	header button {
+		display: none;
+	}
+
+
+	/* logo bloomscape */
+	header img {
+		width: 10.5em;
+		padding-top: .8em;
+		margin-left: 2em;
+		}
+
+
+	/* Opmaak mobiele menu wordt op navigatie desktop weergave geplaatst (opmaak veranderd dus) */
+	header nav:nth-of-type(1) {
+		position: static;
+		background: none;
+		transform: none;
+		justify-content: center;
+
+	
+		width: 60%;
+		max-width: 50em;
+
+		/* grid (menu onderdelen) verticaal centreren op de pagina */
+		justify-content: center;
+	}
+	
+
+	/* opmaak koppelingen dat uit het menu op de navigatie balk geplaatst wordt (lijst wordt verticaal naast elkaar geplaatst)*/
+	header nav:nth-of-type(1) ul {
+		display: flex;
+		justify-content: center;
+
+		padding-left: 0;
+		margin-top: 0;
+	}
+
+
+	/* kleur verandering dat zichtbaar is op lichte achtergrond */
+	header nav:nth-of-type(1) a{
+		color: var(--color-grijs);
+	}
+
+
+	/* hover en focus states */
+	header nav:nth-of-type(1) a:hover {
+		color: var(--color-grijs);
+		border-color: var(--color-grijs);
+	}
+
+
+	header nav:nth-of-type(1) a:focus {
+		color: var(--color-grijs);
+	}
+
+
+	/* verwijderen van linkjes die niet in de navigatie balk staan. */
+	header nav:nth-of-type(1) li:nth-of-type(6), li:nth-of-type(7), li:nth-of-type(8){
+		display: none;
+	}
+
+	
+	/* sluitbutton niet nodig op desktopversie */
+	header nav:nth-of-type(1) button{
+		display: none;
+	}
+}
+
+/*------------------------------------------------------------------*/
+/*-------------------------Einde-Header-----------------------------*/
+/*------------------------------------------------------------------*/
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 55px;
+  }
+  
+  main h1 {
+	font-family: 'basiccommericalNormal';
+	text-transform: uppercase;
+	font-size: large;
+	align-items: center;
+	
+  }
+  
+  main section ul {
+	list-style-type: none;
+	display: grid;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: 1fr;
+    grid-gap: 2em;
+  }
+  
+  main section ul li {
+	justify-content: center;
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  main section ul li p {
+	font-family: 'basiccommericalNormal';
+	text-transform: none;
+	font-size: small;
+	max-width: 100%;
+	
+
+  }
+  main section ul li img {
+	max-width: 100%; 
+	/* Hiermee wordt de afbeelding schaalbaar binnen de grenzen van de li */
+  }
+
+  main section ul li button {
+	font-family: 'basiccommericalNormal';
+	text-transform: uppercase;
+  }
+
+
+
+
+
+
+
+
+
+	
 

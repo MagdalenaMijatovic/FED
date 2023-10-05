@@ -64,7 +64,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  - Het poppetje van account wordt voorgelezen als "komma link"
+  - De alt van de plaatjes wordt niet voorgelezen 
+  - De screenreader geeft goed aan waar de gebruiken zich bevind(welke selectie)
+  - De screenreader gaat goed van boven naar beneden te werk
+  - Het is onduidelijk als de screenreader  de verschillende categorieën zoals behandelingen en packages selecteert
+  - Voor de rest is site goed bereikbaar met de screenreader
+  
+
 
 </details>
 
@@ -102,20 +109,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
+  | Magdalena
+  | ---
+  | Ik krijg mijn font niet geïnstaleerd, snap niet hoe dat moet
+  | Ik krijg de foto's niet naast elkaar in een column
+  | Ik krijg de balk boven de nav bar niet over de gehele breedte van het scherm
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - In je root importeren en dan een font-family maken. Heb via een site mijn woff2 bestand importeren. Ben erachter gekomen dat er een "normal", "italic" en "bold" van de fonts was. Daar heb ik ze nu naar vernoemd.
+  - De balk naar 100% gezet, nu klopt het.
+  - Voor de svg kun je via inspecteren de link kopieren en in je html zetten
+  
 
 </details>
 
@@ -133,15 +139,36 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
+  Ik zit deze week in een ander groepje, heb gevraagd in teams of ze agenda punten hadden. Ze zeiden soort van, niet echt.. Ik heb ook een groepschat aangemaakt, daar reageren ze niet op.
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Magdalena  
+  1. Ik krijg de iconen niet op de juiste grootte
+  2. Ik snap niet hoe ik de foto's naast elkaar krijg met de tekst onder elke foto, en de button. 
+  3. De foto's met de tekst en button moeten als het scherm kleiner wordt naast elkaar komen te staan.
+  4.
+  5.
 
+  | student 2 
+  1.
+  2. 
+  3. 
+  4. 
+  5. 
 
+  | student 3   
+  1.
+  2. 
+  3. 
+  4. 
+  5. 
+
+  | student 4 
+  1.
+  2. 
+  3. 
+  4. 
+  5.        
+  
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
@@ -237,7 +264,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
+  1. https://css-tricks.com/snippets/css/using-font-face-in-css/
   2. bron 2
   3. ...
 
