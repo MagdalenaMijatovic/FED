@@ -83,13 +83,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
-
-  ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="readme-images/breakdown.jpg" width="375px" alt="breakdown van de hele pagina">
 
 </details>
 
@@ -142,32 +136,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Ik zit deze week in een ander groepje, heb gevraagd in teams of ze agenda punten hadden. Ze zeiden soort van, niet echt.. Ik heb ook een groepschat aangemaakt, daar reageren ze niet op.
 
   | Magdalena  
-  1. Ik krijg de iconen niet op de juiste grootte
-  2. Ik snap niet hoe ik de foto's naast elkaar krijg met de tekst onder elke foto, en de button. 
+  1. Ik snap niet hoe ik de foto's naast elkaar krijg met de tekst onder elke foto, en de button. 
+  2. Ik krijg de iconen niet op de juiste grootte
   3. De foto's met de tekst en button moeten als het scherm kleiner wordt naast elkaar komen te staan.
-  4.
-  5.
 
-  | student 2 
-  1.
-  2. 
-  3. 
-  4. 
-  5. 
 
-  | student 3   
-  1.
-  2. 
-  3. 
-  4. 
-  5. 
+  | Laura Mostert
+  1. Gaat best lekker
+  2. Site gebruikt geen javascript, hoe moet ze dit toepassen?
+  
 
-  | student 4 
-  1.
-  2. 
-  3. 
-  4. 
-  5.        
+  | Dan Naumann
+  1.  wist het nog niet
+  
+
+  | Diem Do
+  1. Is er niet bij
+         
   
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
