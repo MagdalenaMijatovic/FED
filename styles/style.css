@@ -96,7 +96,6 @@ header {
 	/* maakt het mogelijk om aanbiedingsbalk te verdwijnen bij het scrollen */
 	position: sticky;
 	top: -2.1em;
-
 	border-bottom: 1px solid var(--color-divider);
 
 }
@@ -188,7 +187,7 @@ header nav:nth-of-type(1) {
 
 
 
-/* opmaak menu */
+/* opmaak menu
 header nav:nth-of-type(1) ul {
 	padding: 0;
 	margin-top: 3em;
@@ -311,78 +310,104 @@ header nav:nth-of-type(1) button{
 	}
 
 
-	/* verwijderen van linkjes die niet in de navigatie balk staan. */
-	header nav:nth-of-type(1) li:nth-of-type(6), li:nth-of-type(7), li:nth-of-type(8){
-		display: none;
-	}
 
 	
 	/* sluitbutton niet nodig op desktopversie */
 	header nav:nth-of-type(1) button{
 		display: none;
 	}
-}
+} */
 
 /*------------------------------------------------------------------*/
 /*-------------------------Einde-Header-----------------------------*/
 /*------------------------------------------------------------------*/
 
-main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding-top: 55px;
-  }
-  
-  main h1 {
+main section{
+	padding: 55px;
+	
+}
+ 
+main h3 {
 	font-family: 'basiccommericalNormal';
 	text-transform: uppercase;
-	font-size: large;
+	font-size: 15px;
 	align-items: center;
-	
+	justify-content: center;
+	padding: 55px 0;
+	text-align: center;
   }
-  
-  main section ul {
-	list-style-type: none;
+
+main section ul li img{
+	width: 100%;
+	margin: 0 auto;
+}
+
+main section ul{
+	
+	list-style: none;
+	padding: 0 55px;
 	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+	gap: 1.875em;
+	max-width: 1090px;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: flex-start;
+	
+}
+
+main section ul li {
+	
+	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	grid-template-columns: 1fr;
-    grid-gap: 2em;
-  }
-  
-  main section ul li {
-	justify-content: center;
-	display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
+	text-align: center;
+	align-items: center; 
+}
 
-  main section ul li p {
+p{
 	font-family: 'basiccommericalNormal';
-	text-transform: none;
-	font-size: small;
-	max-width: 100%;
-	
+	font-size: 14px;
+	padding: 0 10px 17.5px 10px;
+	letter-spacing: 0.3px;
+	line-height: 1.5;
+}
 
-  }
-  main section ul li img {
-	max-width: 100%; 
-	/* Hiermee wordt de afbeelding schaalbaar binnen de grenzen van de li */
-  }
-
-  main section ul li button {
+h4{
 	font-family: 'basiccommericalNormal';
 	text-transform: uppercase;
+	font-size: 13px;
+	padding: 17.5px  0 17.5px 0 ;
+	
+}
+
+main section ul li button{
+	background: none;
+	border: 0.1em solid var(--color-text);
+	font-family: 'basiccommericalNormal' ;
+	font-size: 12px;
+	padding: 8px 10px;
+	text-transform: uppercase;
+	height: 30px;
+	width:81.79px;
+	
+
+}
+
+main section ul li button:hover{
+	border-color: var(--color-hover-donkere-button);
+	color: var(--color-hover-lichte-button);
+}
+
+main section h2 {
+	font-family: 'basiccommericalNormal';
+	text-transform: uppercase;
+	font-size: 20px;
+	align-items: center;
+	justify-content: center;
+	padding: 55px 0;
+	text-align: center;
   }
-
-
-
-
-
 
 
 
