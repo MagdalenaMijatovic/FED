@@ -82,20 +82,17 @@ body {
 
 
 /* navigatie, menu en aanbiedingsbalk */
-header {
+header section {
 	background-color: var(--color-background);
+	height: 117.9px;
 	
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 
 	align-items: center;
+	padding: 0px 55px;
 
-	padding-bottom: .6em;
-
-	/* maakt het mogelijk om aanbiedingsbalk te verdwijnen bij het scrollen */
-	position: sticky;
-	top: -2.1em;
 	border-bottom: 1px solid var(--color-divider);
 
 }
@@ -110,37 +107,82 @@ header p {
 	font-size: small;
 	line-height: 2em;
 	text-align: center;
+	justify-content: center;
 	padding: 0.6em;
 }
 
 /* logo browhouse */
-header img {
-	width: 10.5em;
-	padding-top: .8em;
+header a:first-of-type {
+background-color: aquamarine;
 }
+
+header section img{
+	background: purple;
+	align-items: flex-start;
+	padding-bottom: 1em;
+	width: 165px;
+	height: auto;
+}
+
+
+
 
 /* icoontjes | zoeken, account en winkelwagen */
 
 header nav:nth-of-type(2) ul {
     list-style: none;
-    padding: 0;
+	padding-right: 3.5em;
     display: flex;
-    align-items: center; 
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background-color: purple;
+    width: auto;
+    height: 41.66px;
 }
 
 header nav:nth-of-type(2) li {
-    display: inline-block; 
     margin: 0;
     padding: 0;
-	width: fit-content;
-	height: 20px;
-    margin-right: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    background-color: pink;
 }
 
-header nav:nth-of-type(2) img {
-    width: auto;
-    height: 20px;
+/* Eerste SVG-afbeelding */
+nav ul li:nth-of-type(1) a svg {
+    background-color: red;
+    width: 17.72px;
+    height: 17.73px;
+    display: flex; /* Nodig om SVG te centreren */
+    align-items: center; /* Verticale uitlijning in het midden */
+    justify-content: center; /* Horizontale uitlijning in het midden */
 }
+
+/* Tweede SVG-afbeelding */
+nav ul li:nth-of-type(2) a svg {
+    background-color: blue;
+    width: 15.04px;
+    height: 20px;
+    display: flex; /* Nodig om SVG te centreren */
+    align-items: center; /* Verticale uitlijning in het midden */
+    justify-content: center; /* Horizontale uitlijning in het midden */
+}
+
+/* Derde SVG-afbeelding */
+nav ul li:nth-of-type(3) a svg {
+    background-color: green;
+    width: 18.03px;
+    height: 19.1px;
+    display: flex; /* Nodig om SVG te centreren */
+    align-items: center; /* Verticale uitlijning in het midden */
+    justify-content: center; /* Horizontale uitlijning in het midden */
+}
+
+
 
 
 
@@ -318,6 +360,8 @@ header nav:nth-of-type(1) button{
 	}
 } */
 
+
+
 /*------------------------------------------------------------------*/
 /*-------------------------Einde-Header-----------------------------*/
 /*------------------------------------------------------------------*/
@@ -435,21 +479,22 @@ main section h2 {
 	gap: 1.875em;
 	margin: 0 auto;
 	justify-content: center;
-	align-items: flex-start; 
+	align-items: flex-start;
 	text-align: start;
 	padding-bottom: 55px;
   }
-
+  
   main section:nth-of-type(3) ul li {
 	background-color: yellow;
-	align-items: flex-start;
-
   }
+  
+  
 
   main section:nth-of-type(3) ul li p  {
 	padding-left: 0;
 	
   }
+  
 
   main section:nth-of-type(3) ul li button  {
 	width: 102px;
@@ -489,3 +534,9 @@ footer section{
 	bottom:0;
 
 }
+
+
+  
+  
+	
+	

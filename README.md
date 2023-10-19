@@ -157,10 +157,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
+  - Heel fijn voorbeeld gekregen van Sanne in codepen! Dit heb ik aangehouden bij m'n eigen code(wel de minmax aangepast) en nu werkt dat stukje!
+  - De iconen heb ik opniew geinporteerd incl viewport vanuit de inspecteren van de site. Toen ben ik gaan spelen met achtergrond kleuren zodat ik kon zien wat ik veranderde
+  tijdens het coderen. Dit is een fijn hulpmiddel!
+  
 
 </details>
 
@@ -192,13 +192,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  | Magdalena  
+  1. Is het mogelijk om de buttons van de eerste foto's elke keer onderaan de ul te zetten ipv van de li? Zo is het lelijk
+  2. Hoe krijg ik bij de tweede ul dat de de li smaller en langer worden totdat het scherm 749px is en dat ze dan onder elkaar komen. Dat tweede gedeelte lukt wel. Alleen nu blijven de li een bepaalde grootte waardoor ze over 2 rijen verdeeld worden ipv dat ze kleiner worden.
+
+
+  | Laura Mostert
+  1. Heeft geen vragen
+  
+
+  | Dan Naumann
+  1.  Nog niks gestuurd
+  
+
+  | Diem Do
+  1.  Nog niks gestuurd
+ 
 
 
   ### Verslag van meeting
