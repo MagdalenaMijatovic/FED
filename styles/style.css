@@ -1,8 +1,4 @@
 /**************/
-/* STYLING BEIDE PAGINA'S */
-/**************/
-
-/**************/
 /* CSS REMEDY */
 /**************/
 
@@ -11,7 +7,7 @@
 *::before {
 	box-sizing: border-box;
 	border: 0;
-	margin: 0; 
+	margin: 0;
 }
 
 button,
@@ -57,24 +53,24 @@ summary {
 	/* basiskleuren */
 	--color-wit: #f3f3f3;
 	--color-grijs: #ECEBE9;
-	--color-divider:#e2e2e2;
+	--color-divider: #e2e2e2;
 
 	/* achtergrond kleur */
 	--color-background: #fff;
 
 	/* hoverkleuren van de buttons */
-	--color-hover-lichte-button: #404040;
-	--color-hover-donkere-button:
+	--color-hover-light-theme: #666666;
+	
 }
 
 /********************/
 /* ALGEMENE STIJLEN */
 /********************/
 body {
-	margin:0;
-	background-color:var(--color-background);
-	color:var(--color-text);
-  }
+	margin: 0 auto;
+	background-color: var(--color-background);
+	color: var(--color-text);
+}
 
 /*------------------------------------------------------------------*/
 /*----------------------------Header--------------------------------*/
@@ -84,16 +80,12 @@ body {
 /* navigatie, menu en aanbiedingsbalk */
 header section {
 	background-color: var(--color-background);
-	height: 117.9px;
-	
+	height: 7.36875rem;
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
-
 	align-items: center;
-	padding: 0px 55px;
-
-	border-bottom: 1px solid var(--color-divider);
+	padding: 0rem 3.4375rem;
+	border-bottom: 0.0625rem solid var(--color-divider);
 
 }
 
@@ -112,122 +104,148 @@ header p {
 }
 
 /* logo browhouse */
-header a:first-of-type {
-background-color: aquamarine;
-}
-
-header section img{
-	background: purple;
+header section img {
 	align-items: flex-start;
-	padding-bottom: 1em;
-	width: 165px;
+	width: 10.3125rem;
 	height: auto;
 }
 
-
-
-
 /* icoontjes | zoeken, account en winkelwagen */
-
 header nav:nth-of-type(2) ul {
-    list-style: none;
-	padding-right: 3.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    background-color: purple;
-    width: auto;
-    height: 41.66px;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0;
+	width: 9.890625rem;
+	height: 2.60375rem;
 }
 
-header nav:nth-of-type(2) li {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20px;
-    width: 20px;
-    background-color: pink;
+/* icoontje | zoeken */
+header nav:nth-of-type(2) li:nth-of-type(1) {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 2.60375rem;
+	width: 2.1875rem;
 }
 
-/* Eerste SVG-afbeelding */
+/* icoontje | account */
+header nav:nth-of-type(2) li:nth-of-type(2) {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 2.60375rem;
+	width: 2.625rem;
+}
+
+/* icoontje | winkelwagen */
+header nav:nth-of-type(2) li:nth-of-type(3) {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 2.60375rem;
+	width: 2.625rem;
+}
+
+/* Eerste SVG-icoon */
 nav ul li:nth-of-type(1) a svg {
-    background-color: red;
-    width: 17.72px;
-    height: 17.73px;
-    display: flex; /* Nodig om SVG te centreren */
-    align-items: center; /* Verticale uitlijning in het midden */
-    justify-content: center; /* Horizontale uitlijning in het midden */
+	width: 1.1075rem;
+	height: 1.108125rem;
+	display: flex;
+	/* Nodig om SVG te centreren */
+	align-items: center;
+	/* Verticale uitlijning in het midden */
+	justify-content: center;
+	/* Horizontale uitlijning in het midden */
 }
 
-/* Tweede SVG-afbeelding */
+/* Tweede SVG-icoon */
 nav ul li:nth-of-type(2) a svg {
-    background-color: blue;
-    width: 15.04px;
-    height: 20px;
-    display: flex; /* Nodig om SVG te centreren */
-    align-items: center; /* Verticale uitlijning in het midden */
-    justify-content: center; /* Horizontale uitlijning in het midden */
+	width: 0.94rem;
+	height: 1.25rem;
+	display: flex;
+	/* Nodig om SVG te centreren */
+	align-items: center;
+	/* Verticale uitlijning in het midden */
+	justify-content: center;
+	/* Horizontale uitlijning in het midden */
 }
 
-/* Derde SVG-afbeelding */
+/* Derde SVG-icoon */
 nav ul li:nth-of-type(3) a svg {
-    background-color: green;
-    width: 18.03px;
-    height: 19.1px;
-    display: flex; /* Nodig om SVG te centreren */
-    align-items: center; /* Verticale uitlijning in het midden */
-    justify-content: center; /* Horizontale uitlijning in het midden */
-}
-
-
-
-
-
-
-/* menubutton */
-header button {
-    order: 3; /* Zorgt ervoor dat de button aan de rechterkant staat */
-    margin-left: auto; /* Plaats de button aan de rechterkant */
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
+	width: 1.126875rem;
+	height: 1.19375rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	
+}
 
-header button img {
-	height: 100%;
-	width: 100%;
+/* hamburger menu */
+header button:nth-of-type(1) {
+	/* Zorgt ervoor dat de button aan de rechterkant staat */
+	margin-left: 0;
+	/* Plaats de button aan de rechterkant */
+	background: pink;
+	border: none;
+	cursor: pointer;
+	width: 2.625rem;
+	height: 2.60375rem;
+}
 
+/* hamburger svg */
+header button:nth-of-type(1) svg {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+/* kruisje menu */
+header button:nth-of-type(2) {
+	margin-left: 0;
+	background: purple;
+	border: none;
+	cursor: pointer;
+	width: 2.625rem;
+	height: 2.60375rem;
+	display: none;
+}
+/* kruisje svg */
+header button:nth-of-type(2) svg {
+	width: 1.2475rem;
+	height: 1.24625rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
 }
 
 
+header nav:nth-of-type(2) {
+	display: flex;
+}
 
 /* menu verborgen | mobiele weergave */
 header nav:nth-of-type(1) {
-	display: flex;
+	display: none;
 	justify-content: space-between;
-	
 	position: fixed;
-
 	left: 0;
 	top: 0;
 	bottom: 0;
-
 	width: 100%;
 	max-width: 18.7em;
 
-
-	transform: translateX(-100%);
-
-	/* de sluit button (X) komt boven in te staan */
-	align-items: flex-start;
+/* de sluit button (X) komt boven in te staan */
+align-items: flex-start;
 }
-
-
 
 header nav:nth-of-type(1) ul {
 	padding: 0;
@@ -243,49 +261,22 @@ header nav:nth-of-type(1) ul li a {
 }
 
 header nav:nth-of-type(1) a:hover {
-	border: solid 1px var(--color-hover-lichte-button);
-
+	border: solid 0.0625rem var(--color-hover-light-theme);
 	border-top: none;
 	border-left: none;
 	border-right: none;
 }
 
-header nav:nth-of-type(1) li{
+header nav:nth-of-type(1) li {
 	list-style: none;
 	text-align: center;
-
 	padding: 1em;
 }
 
 
 
-/* als er op de button gedrukt wordt verplaatst het verborgen gedeelte op het scherm (van links naar rechts) (mobiele weergave) */
-header nav:nth-of-type(1).actief{
-	transform: translateX(0%);
-}
-
-header nav:nth-of-type(1) a{
-	color: var(--color-text);
-}
-
-
-
-/* sluitbutton menu */
-header nav:nth-of-type(1) button{
-	order: 1;
-	position: static;
-	margin-top: .5em;
-
-	font-family: 'basiccommericalNormal';
-	text-transform: uppercase;
-	font-size: 20pt;
-	color: var(--color-text);
-}
-
-
-
 /* navigatie op desktop weergave */
-@media (min-width:60em) {
+@media (min-width:46.875rem) {
 
 
 	/* verwijdering van de padding zodat boven als onder evenveel witruimte heeft */
@@ -293,20 +284,16 @@ header nav:nth-of-type(1) button{
 		padding-bottom: 0;
 	}
 
-
 	/* menubutton wordt verwijderd/onzichtbaar */
 	header button {
 		display: none;
 	}
 
-
 	/* logo bloomscape */
 	header img {
-		width: 10.5em;
+		width: 10rem;
 		padding-top: .8em;
-		margin-left: 2em;
-		}
-
+	}
 
 	/* Opmaak mobiele menu wordt op navigatie desktop weergave geplaatst (opmaak veranderd dus) */
 	header nav:nth-of-type(1) {
@@ -314,229 +301,240 @@ header nav:nth-of-type(1) button{
 		background: none;
 		transform: none;
 		justify-content: center;
-
-	
 		width: 60%;
 		max-width: 50em;
 
 		/* grid (menu onderdelen) verticaal centreren op de pagina */
 		justify-content: center;
 	}
-	
+
 
 	/* opmaak koppelingen dat uit het menu op de navigatie balk geplaatst wordt (lijst wordt verticaal naast elkaar geplaatst)*/
-	header nav:nth-of-type(1) ul {
-		display: flex;
+	header nav:nth-of-type(1) {
 		justify-content: center;
+		align-items: center;
+		min-width: 19.78125rem;
+		margin: 0;
 
-		padding-left: 0;
-		margin-top: 0;
+		
+	}header nav:nth-of-type(1) ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		padding: 0rem 0rem;
+		height: auto;
+		margin: 0;
 	}
 
-
-	/* kleur verandering dat zichtbaar is op lichte achtergrond */
-	header nav:nth-of-type(1) a{
-		color: var(--color-grijs);
+	header nav:nth-of-type(1) ul li {
+		padding: 0.1875rem 0.625rem;
 	}
-
-
-	/* hover en focus states */
-	header nav:nth-of-type(1) a:hover {
-		color: var(--color-grijs);
-		border-color: var(--color-grijs);
-	}
-
-
-	header nav:nth-of-type(1) a:focus {
-		color: var(--color-grijs);
-	}
-
-
-
 	
 	/* sluitbutton niet nodig op desktopversie */
-	header nav:nth-of-type(1) button{
+	header nav:nth-of-type(1) button {
 		display: none;
 	}
-} */
 
-
-
+	
+}
 /*------------------------------------------------------------------*/
 /*-------------------------Einde-Header-----------------------------*/
 /*------------------------------------------------------------------*/
 
-main section{
-	padding: 0px;
-	
+main section {
+	padding: 0rem;
 }
 
-
-main h3 {
+/* text: behandelingen */
+main h2 {
 	font-family: 'basiccommericalNormal';
 	text-transform: uppercase;
-	font-size: 15px;
+	font-size: 1rem;
 	align-items: center;
 	justify-content: center;
-	padding: 55px 0;
+	padding: 3.4375rem 0;
 	text-align: center;
-  }
-
-main section ul li img{
-	width: 100%;
-	margin: 0 auto;
 }
 
-main section:nth-of-type(1) ul{
-	
+/* first ul li */
+main section:nth-of-type(1) ul {
 	list-style: none;
-	padding: 0 55px;
+	padding: 0 3.4375rem;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-	gap: 1.875em;
-	max-width: 1090px;
+	grid-template-columns: repeat(autofit, minmax(20.6875rem, 33.125rem));
+	gap: 1.875rem;
+	max-width: 68.125rem;
 	margin: 0 auto;
 	justify-content: center;
 	align-items: flex-start;
-	
 }
 
 main section:nth-of-type(1) ul li {
-	
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	align-items: center; 
+	align-items: center;
+	height: 100%;
+	justify-content: space-between;
 }
 
-p{
+main section ul li img {
+	width: 100%;
+	margin: 0 auto;
+}
+
+main section:nth-of-type(1) ul li button {
+	background: none;
+	border: 0.1em solid var(--color-text);
 	font-family: 'basiccommericalNormal';
-	font-size: 14px;
-	padding: 0 10px 17.5px 10px;
-	letter-spacing: 0.3px;
+	font-size: 0.75rem;
+	padding: 0.5rem 0.625rem;
+	text-transform: uppercase;
+	height: 1.875rem;
+	width: 5.111875rem;
+}
+
+main section:nth-of-type(1) ul li button:hover {
+	border: 0.1rem solid var(--color-hover-light-theme);
+	color: var(--color-hover-light-theme);
+}
+
+/* desktop weergave behandelingen */
+@media (min-width:46.875rem) {
+main section:nth-of-type(1) ul {
+	list-style: none;
+	padding: 0 3.4375rem;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(18.84375rem, 33.125rem));
+	gap: 1.875rem;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: flex-start;
+}
+}
+
+/* text: packages */
+h4 {
+	font-family: 'basiccommericalNormal';
+	text-transform: uppercase;
+	font-size: 0.8125ren;
+	padding: 1.09375rem 0 1.09375rem 0;
+}
+
+p {
+	font-family: 'basiccommericalNormal';
+	font-size: 0.875rem;
+	padding: 0 0.625rem 1.09375rem 0.625rem;
+	letter-spacing: 0.01875rem;
 	line-height: 1.5;
 }
 
-h4{
-	font-family: 'basiccommericalNormal';
-	text-transform: uppercase;
-	font-size: 13px;
-	padding: 17.5px  0 17.5px 0 ;
-	
-}
-
-main section:nth-of-type(1) ul li button{
-	background: none;
-	border: 0.1em solid var(--color-text);
-	font-family: 'basiccommericalNormal' ;
-	font-size: 12px;
-	padding: 8px 10px;
-	text-transform: uppercase;
-	height: 30px;
-	width:81.79px;
-	
-
-}
-
-main section ul:nth-of-type(1) li button:hover{
-	border-color: var(--color-hover-donkere-button);
-	color: var(--color-hover-lichte-button);
-}
-
+/* second ul li */
 main section:nth-of-type(2) {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	max-width: 1120px;
-	padding: 55px;
+	max-width: 70rem;
+	padding: 6.875rem;
 	margin: 0 auto;
-  }
-
-  main section:nth-of-type(2) p {
-	max-width: 716.66px;
-
 }
 
-main section h2 {
+main section:nth-of-type(2) p {
+	max-width: 44.79125rem;
+}
+
+main section h3 {
 	font-family: 'basiccommericalNormal';
 	text-transform: uppercase;
-	font-size: 20px;
+	font-size: 1.25rem;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	padding-bottom: 17.5px;
-  }
+	padding-bottom: 1.09375rem;
+}
 
-  main section:nth-of-type(3) ul {
-	background-color: aqua;
+main section:nth-of-type(3) ul {
 	width: 100%;
 	list-style: none;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(190.99px, 343.33px));
+	grid-template-columns: repeat(1, minmax(20.25rem, 43.625rem));
 	gap: 1.875em;
 	margin: 0 auto;
 	justify-content: center;
 	align-items: flex-start;
 	text-align: start;
-	padding-bottom: 55px;
-  }
-  
-  main section:nth-of-type(3) ul li {
-	background-color: yellow;
-  }
-  
-  
-
-  main section:nth-of-type(3) ul li p  {
-	padding-left: 0;
-	
-  }
-  
-
-  main section:nth-of-type(3) ul li button  {
-	width: 102px;
-	height: 30px;
-	text-transform: uppercase;
-	background: none;
-	border: 0.1em solid var(--color-text);
-	font-family: 'basiccommericalNormal' ;
-	font-size: 12px;
-	padding: 8px 10px;	
-  }
-
-  main section ul:nth-of-type(3) li button:hover{
-	border-color: var(--color-hover-donkere-button);
-	color: var(--color-hover-lichte-button);
+	padding-left: 1.375rem;
+	padding-right: 1.375rem;
 }
 
+/* desktop weergave packages */
+@media (min-width:46.875rem) {
+	main section:nth-of-type(3) ul {
+		width: 100%;
+		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(11.936875rem, 21.458125rem));
+		gap: 1.875rem;
+		margin: 0 auto;
+		justify-content: center;
+		align-items: flex-start;
+		text-align: start;
+		padding-left:3.4375rem;
+		padding-right:3.4375rem;
+		padding-bottom: 3.4375rem;
+	}
+}
 
+main section:nth-of-type(3) ul li {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+main section:nth-of-type(3) ul li p {
+	padding-left: 0;
+}
+
+span{
+	font-weight: bolder;
+}
+
+main section:nth-of-type(3) ul li button {
+	width: 6.375rem;
+	height: 1.875rem;
+	text-transform: uppercase;
+	background: none;
+	border: 0.1rem solid var(--color-text);
+	font-family: 'basiccommericalNormal';
+	font-size: 0.75rem;
+	margin: 0;
+}
+
+main section:nth-of-type(3) ul li button:hover {
+	border-color: var(--color-hover-light-theme);
+	color: var(--color-hover-light-theme);
+}
 
 /*------------------------------------------------------------------*/
 /*-----------------------------Footer-------------------------------*/
 /*------------------------------------------------------------------*/
-	
 
-footer{
+
+footer {
 	background-color: var(--color-grijs);
 	width: 100%;
-	min-height: 829px;
-	
+	min-height: 51.8125rem;
 }
 
-footer section{
+footer section {
 	width: 100%;
-	min-height: 160px;
-	border-top: 2px solid var(--color-divider);
+	min-height: 10rem;
+	border-top: 0.125rem solid var(--color-divider);
 	position: relative;
-	bottom:0;
-
+	bottom: 0;
 }
-
-
-  
-  
-	
-	

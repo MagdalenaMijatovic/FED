@@ -214,10 +214,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - minmax moest worden vervangen door 3, nu klopt het!
+  - flexbox nav, flexwrap en dan height in de header weghalen, padding toevoegen elementen voor ruimte.
 
 </details>
 
