@@ -60,7 +60,7 @@ summary {
 
 	/* hoverkleuren van de buttons */
 	--color-hover-light-theme: #666666;
-	
+
 }
 
 /********************/
@@ -80,20 +80,27 @@ body {
 /* navigatie, menu en aanbiedingsbalk */
 header section {
 	background-color: var(--color-background);
-	height: 7.36875rem;
+	height: 3.9375rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	padding: 0rem 3.4375rem;
+	padding: 0 0.9375rem;
 	border-bottom: 0.0625rem solid var(--color-divider);
+}
 
+/* flex grow zorgt ervoor dat het alle overige ruimte inneemt | > betekent alleen het directe kind */
+header section:first-of-type>a:first-child {
+	flex-grow: 1;
+}
+
+header section {
+	justify-content: center;
 }
 
 /* Grijze balk | Top van de pagina*/
 header p {
 	background-color: var(--color-grijs);
 	font-family: 'basiccommericalNormal';
-	order: -100;
 	top: 0;
 	width: 100%;
 	font-size: small;
@@ -104,10 +111,11 @@ header p {
 }
 
 /* logo browhouse */
-header section img {
-	align-items: flex-start;
+header img {
+	align-self: flex-start;
 	width: 10.3125rem;
 	height: auto;
+	padding-top: 0.5rem;
 }
 
 /* icoontjes | zoeken, account en winkelwagen */
@@ -118,7 +126,7 @@ header nav:nth-of-type(2) ul {
 	align-items: center;
 	justify-content: flex-end;
 	gap: 0;
-	width: 9.890625rem;
+	width: 7.395rem;
 	height: 2.60375rem;
 }
 
@@ -186,7 +194,6 @@ nav ul li:nth-of-type(3) a svg {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
 }
 
 /* hamburger menu */
@@ -194,7 +201,7 @@ header button:nth-of-type(1) {
 	/* Zorgt ervoor dat de button aan de rechterkant staat */
 	margin-left: 0;
 	/* Plaats de button aan de rechterkant */
-	background: pink;
+	background: none;
 	border: none;
 	cursor: pointer;
 	width: 2.625rem;
@@ -210,114 +217,112 @@ header button:nth-of-type(1) svg {
 /* kruisje menu */
 header button:nth-of-type(2) {
 	margin-left: 0;
-	background: purple;
+	background: none;
+	padding: 10px 11px;
 	border: none;
 	cursor: pointer;
 	width: 2.625rem;
 	height: 2.60375rem;
 	display: none;
 }
+
 /* kruisje svg */
 header button:nth-of-type(2) svg {
 	width: 1.2475rem;
 	height: 1.24625rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 0;
 }
-
 
 header nav:nth-of-type(2) {
 	display: flex;
 }
 
-/* menu verborgen | mobiele weergave */
+/* menu mobiele weergave */
 header nav:nth-of-type(1) {
-	display: none;
-	justify-content: space-between;
+	justify-content: center;
 	position: fixed;
 	left: 0;
-	top: 0;
-	bottom: 0;
+	right: 0;
+	top: 6.536875rem;
 	width: 100%;
-	max-width: 18.7em;
-
-/* de sluit button (X) komt boven in te staan */
-align-items: flex-start;
+	background-color: var(--color-background);
+	transform: translateX(-100%);
 }
+
 
 header nav:nth-of-type(1) ul {
 	padding: 0;
-	margin-top: 3em;
-}
-
-header nav:nth-of-type(1) ul li a {
-	font-family: 'basiccommericalNormal';
-	font-size: 10pt;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: var(--color-text);
-}
-
-header nav:nth-of-type(1) a:hover {
-	border: solid 0.0625rem var(--color-hover-light-theme);
-	border-top: none;
-	border-left: none;
-	border-right: none;
+	display: block;
+	justify-content: flex-start;
 }
 
 header nav:nth-of-type(1) li {
 	list-style: none;
-	text-align: center;
-	padding: 1em;
+	text-align: start;
+}
+
+header nav:nth-of-type(1) ul li a {
+	font-family: 'basiccommericalNormal';
+	font-size: 0.875rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 1rem;
+	display: block;
+	font-family: 'basiccommericalNormal';
+	border-bottom: solid 1px var(--color-divider);
+	color: var(--color-text);
+}
+
+header nav:nth-of-type(1) ul li a:hover {
+	color: var(--color-hover-light-theme);
+}
+
+header nav:nth-of-type(1) ul li a.active {
+	text-decoration: underline;
 }
 
 
+/* als er op de menubutton gedrukt wordt verplaatst het verborgen gedeelte op het scherm (van links naar rechts) (mobiele weergave) */
+header nav:nth-of-type(1).actief {
+	transform: translateX(0%);
+}
 
-/* navigatie op desktop weergave */
+/* navigatie op desktop weergave 750px */
 @media (min-width:46.875rem) {
 
-
-	/* verwijdering van de padding zodat boven als onder evenveel witruimte heeft */
-	header {
-		padding-bottom: 0;
-	}
-
-	/* menubutton wordt verwijderd/onzichtbaar */
-	header button {
+	header button:nth-of-type(1) {
 		display: none;
 	}
 
-	/* logo bloomscape */
-	header img {
-		width: 10rem;
-		padding-top: .8em;
+	header button:nth-of-type(2) {
+		display: none;
 	}
 
-	/* Opmaak mobiele menu wordt op navigatie desktop weergave geplaatst (opmaak veranderd dus) */
+	header section {
+		background-color: var(--color-background);
+		height: 6.3125rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 3.4375rem;
+		border-bottom: 0.0625rem solid var(--color-divider);
+	}
+
+
 	header nav:nth-of-type(1) {
+		display: flex;
 		position: static;
-		background: none;
-		transform: none;
-		justify-content: center;
-		width: 60%;
-		max-width: 50em;
-
-		/* grid (menu onderdelen) verticaal centreren op de pagina */
-		justify-content: center;
-	}
-
-
-	/* opmaak koppelingen dat uit het menu op de navigatie balk geplaatst wordt (lijst wordt verticaal naast elkaar geplaatst)*/
-	header nav:nth-of-type(1) {
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		min-width: 19.78125rem;
 		margin: 0;
+		background-color: none;
+		transform: translateX(0);
+		padding: 0 2.8525rem;
+	}
 
-		
-	}header nav:nth-of-type(1) ul {
+
+	header nav:nth-of-type(1) ul {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -325,19 +330,33 @@ header nav:nth-of-type(1) li {
 		padding: 0rem 0rem;
 		height: auto;
 		margin: 0;
+		background-color: none;
 	}
 
-	header nav:nth-of-type(1) ul li {
+	header nav:nth-of-type(1) ul li a {
+		font-family: 'basiccommericalNormal';
+		font-size: 0.8125rem;
+		text-decoration: none;
+		text-transform: uppercase;
 		padding: 0.1875rem 0.625rem;
-	}
-	
-	/* sluitbutton niet nodig op desktopversie */
-	header nav:nth-of-type(1) button {
-		display: none;
+		display: block;
+		font-family: 'basiccommericalNormal';
+		border: none;
+		color: var(--color-text);
 	}
 
-	
+	header nav:nth-of-type(1) ul li a:hover {
+		text-decoration: underline;
+	}
 }
+
+@media (min-width:56.4375rem) {
+	header section {
+		height: 4.71875rem;
+
+	}
+}
+
 /*------------------------------------------------------------------*/
 /*-------------------------Einde-Header-----------------------------*/
 /*------------------------------------------------------------------*/
@@ -393,7 +412,7 @@ main section:nth-of-type(1) ul li button {
 	padding: 0.5rem 0.625rem;
 	text-transform: uppercase;
 	height: 1.875rem;
-	width: 5.111875rem;
+	width: 6.170625rem;
 }
 
 main section:nth-of-type(1) ul li button:hover {
@@ -403,16 +422,16 @@ main section:nth-of-type(1) ul li button:hover {
 
 /* desktop weergave behandelingen */
 @media (min-width:46.875rem) {
-main section:nth-of-type(1) ul {
-	list-style: none;
-	padding: 0 3.4375rem;
-	display: grid;
-	grid-template-columns: repeat(2, minmax(18.84375rem, 33.125rem));
-	gap: 1.875rem;
-	margin: 0 auto;
-	justify-content: center;
-	align-items: flex-start;
-}
+	main section:nth-of-type(1) ul {
+		list-style: none;
+		padding: 0 3.4375rem;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(18.84375rem, 33.125rem));
+		gap: 1.875rem;
+		margin: 0 auto;
+		justify-content: center;
+		align-items: flex-start;
+	}
 }
 
 /* text: packages */
@@ -469,6 +488,7 @@ main section:nth-of-type(3) ul {
 	text-align: start;
 	padding-left: 1.375rem;
 	padding-right: 1.375rem;
+	padding-bottom: 3.4375rem;
 }
 
 /* desktop weergave packages */
@@ -483,8 +503,8 @@ main section:nth-of-type(3) ul {
 		justify-content: center;
 		align-items: flex-start;
 		text-align: start;
-		padding-left:3.4375rem;
-		padding-right:3.4375rem;
+		padding-left: 3.4375rem;
+		padding-right: 3.4375rem;
 		padding-bottom: 3.4375rem;
 	}
 }
@@ -500,7 +520,7 @@ main section:nth-of-type(3) ul li p {
 	padding-left: 0;
 }
 
-span{
+span {
 	font-weight: bolder;
 }
 
@@ -525,16 +545,187 @@ main section:nth-of-type(3) ul li button:hover {
 /*------------------------------------------------------------------*/
 
 
-footer {
+
+footer section:nth-of-type(1) {
 	background-color: var(--color-grijs);
+	color: var(--color-text);
 	width: 100%;
-	min-height: 51.8125rem;
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+	padding-top: 2.8125rem;
+	padding-bottom: 3.4375rem;
 }
 
-footer section {
+/* stijling van de links */
+footer nav{
+	padding-bottom: 12.65625rem;
+}
+
+footer nav a {
+	text-decoration: none;
+	color: var(--color-text);
+	font-family: 'basiccommericalNormal';
+	font-size: 0.875rem;
+}
+
+footer nav a:hover {
+	text-decoration: underline;
+	color: var(--color-hover-light-theme);
+}
+
+footer section:nth-of-type(1) ul{
+	padding: 0;
+	display: block;
+	background-color: none;
+	justify-content: flex-start;
+	width:fit-content;
+}
+
+/* stijling van de li */
+footer section:nth-of-type(1) ul li {
+	list-style: none;
+	padding: 0.9375rem 0;
+	display: block;
+
+}
+
+
+/* Stijling "contact""*/
+footer section:nth-child(2) {
+	display: block;
+	justify-content: flex-start;
+	width: fit-content;
+	padding: 0;
+}
+
+h5 {
+	font-family: 'basiccommericalNormal';
+	font-size: 0.75rem;
+	padding-bottom: 1.21525rem;
+}
+
+footer section p {
+	font-family: 'basiccommericalNormal';
+	font-size: 0.8125rem;
+	padding-left: 0;
+}
+
+/* ruimte tussen het 2e blokje en 3e blokje*/
+footer section p:nth-of-type(2) {
+	padding-bottom: 1.21525rem;
+}
+
+footer p a {
+	text-decoration: none;
+	color: var(--color-text)
+}
+
+footer p a:hover {
+	text-decoration: underline;
+	color: var(--color-hover-light-theme);
+}
+
+/* stijling onder de devider*/
+footer section:nth-of-type(3) {
+	background-color: green;
+}
+
+footer section:nth-of-type(2){
+	background-color: var(--color-grijs);
 	width: 100%;
-	min-height: 10rem;
-	border-top: 0.125rem solid var(--color-divider);
-	position: relative;
-	bottom: 0;
+	padding: 0 1.375rem;
+	display: block;
+	justify-content: center;
+	align-items: center;
+	border-top: 0.1rem solid var(--color-divider);
+}
+
+/* stijling dropdown valuta menu */
+select{
+	font-family: 'basiccommericalNormal';
+	text-transform: uppercase;
+	font-size: 0.875rem;
+	border: 0.05rem solid var(--color-divider);
+	background-color: red;
+}
+
+
+
+footer section:nth-of-type(2) section{
+	background-color: purple;
+	display: block;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+}
+
+
+
+
+footer section:nth-of-type(2) ul:nth-of-type(1) li{
+	padding: 0 0.9375rem;
+	background-color: yellow;
+	width: fit-content;
+	list-style: none;
+}
+/*stijling socials svg*/
+
+footer svg:nth-of-type(1){
+	width: 1.346875rem;
+	height: 1.346875rem;
+}
+
+footer svg:nth-of-type(2){
+	width: 1.4375rem;
+	height: 1.4375rem;
+}
+
+/*stijling betalen svg*/
+footer ul:nth-of-type(2){
+	list-style: none;
+	display: flex;
+	background-color: blue;
+	width:fit-content;
+	height: 4.6875rem;
+	}
+
+footer ul:nth-of-type(2) li{
+	height: 1.5rem;
+	padding-left: 0.3125rem;
+}
+
+footer svg:nth-of-type(3){
+	height: 1.5rem;
+}
+
+footer svg:nth-of-type(4){
+	height: 1.5rem;
+	
+}
+
+footer svg:nth-of-type(5){
+	height: 1.5rem;
+	padding-left: 0.3125rem;
+}
+
+footer svg:nth-of-type(6){
+	height: 1.5rem;
+	
+}
+
+footer svg:nth-of-type(7){
+	height: 1.5rem;
+	
+}
+
+footer svg:nth-of-type(8){
+	height: 1.5rem;
+}
+
+footer svg:nth-of-type(9){
+	height: 1.5rem;
+}
+
+footer svg:nth-of-type(10){
+	height: 1.5rem;
 }

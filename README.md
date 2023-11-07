@@ -257,8 +257,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. https://css-tricks.com/snippets/css/using-font-face-in-css/
-  2. bron 2
-  3. ...
+  1. https://www.freecodecamp.org/news/html-new-line-br-tag-line-break/
+  2. https://stackoverflow.com/questions/26819675/navbar-highlight-for-current-page
+  3. https://www.html-code-generator.com/html/drop-down/currency-names
 
 </details>
