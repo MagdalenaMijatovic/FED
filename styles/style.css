@@ -450,6 +450,7 @@ p {
 	line-height: 1.5;
 }
 
+
 /* second ul li */
 main section:nth-of-type(2) {
 	display: flex;
@@ -546,7 +547,7 @@ main section:nth-of-type(3) ul li button:hover {
 
 
 
-footer section:nth-of-type(1) {
+footer > section:nth-of-type(1) {
 	background-color: var(--color-grijs);
 	color: var(--color-text);
 	width: 100%;
@@ -573,7 +574,7 @@ footer nav a:hover {
 	color: var(--color-hover-light-theme);
 }
 
-footer section:nth-of-type(1) ul{
+footer > section:nth-of-type(1) ul{
 	padding: 0;
 	display: block;
 	background-color: none;
@@ -582,7 +583,7 @@ footer section:nth-of-type(1) ul{
 }
 
 /* stijling van de li */
-footer section:nth-of-type(1) ul li {
+footer > section:nth-of-type(1) ul li {
 	list-style: none;
 	padding: 0.9375rem 0;
 	display: block;
@@ -591,7 +592,7 @@ footer section:nth-of-type(1) ul li {
 
 
 /* Stijling "contact""*/
-footer section:nth-child(2) {
+footer > section:nth-child(2) {
 	display: block;
 	justify-content: flex-start;
 	width: fit-content;
@@ -607,13 +608,11 @@ h5 {
 footer section p {
 	font-family: 'basiccommericalNormal';
 	font-size: 0.8125rem;
-	padding-left: 0;
+	padding-left: 0; 
 }
 
 /* ruimte tussen het 2e blokje en 3e blokje*/
-footer section p:nth-of-type(2) {
-	padding-bottom: 1.21525rem;
-}
+
 
 footer p a {
 	text-decoration: none;
@@ -626,33 +625,37 @@ footer p a:hover {
 }
 
 /* stijling onder de devider*/
-footer section:nth-of-type(3) {
-	background-color: green;
-}
+
 
 footer section:nth-of-type(2){
 	background-color: var(--color-grijs);
 	width: 100%;
-	padding: 0 1.375rem;
-	display: block;
+	padding: 1rem;
+	display: grid;
+	gap:1em;
 	justify-content: center;
 	align-items: center;
 	border-top: 0.1rem solid var(--color-divider);
 }
 
-/* stijling dropdown valuta menu */
+
 select{
 	font-family: 'basiccommericalNormal';
 	text-transform: uppercase;
 	font-size: 0.875rem;
 	border: 0.05rem solid var(--color-divider);
-	background-color: red;
+	/* background-color: var(--color-background); */
+	background-color: var(--color-background);
+	width: 5.26rem;
+	height: 2.175rem;
+	/**/
+	display:flex;
+	justify-content: center;
 }
 
 
-
+/*  */
 footer section:nth-of-type(2) section{
-	background-color: purple;
 	display: block;
 	justify-content: center;
 	align-items: center;
@@ -660,72 +663,53 @@ footer section:nth-of-type(2) section{
 }
 
 
+/***********/
+/* SOCIALS */
+footer section:nth-of-type(2) ul:nth-of-type(1) {
+	display: flex;
+	justify-content: center;
+	gap:.5em;
+	padding-left:0;
+}
 
-
-footer section:nth-of-type(2) ul:nth-of-type(1) li{
-	padding: 0 0.9375rem;
-	background-color: yellow;
+footer section:nth-of-type(2) ul:nth-of-type(1) li {
 	width: fit-content;
 	list-style: none;
 }
+
+footer section:nth-of-type(2) ul:nth-of-type(1) li a {
+	width:3em;
+	aspect-ratio: 1/1;
+	display:grid;
+	place-items: center;
+}
+
 /*stijling socials svg*/
-
-footer svg:nth-of-type(1){
-	width: 1.346875rem;
-	height: 1.346875rem;
+footer section:nth-of-type(2) ul:nth-of-type(1) li svg {
+	width:50%;
 }
 
-footer svg:nth-of-type(2){
-	width: 1.4375rem;
-	height: 1.4375rem;
-}
 
-/*stijling betalen svg*/
-footer ul:nth-of-type(2){
+/**********************/
+/*stijling BETALEN svg*/
+footer section:nth-of-type(2) ul:nth-of-type(2){
 	list-style: none;
 	display: flex;
-	background-color: blue;
-	width:fit-content;
-	height: 4.6875rem;
-	}
+	justify-content: center;
+	align-items: center;
+	gap:.25em;
+	padding-left:0;
 
-footer ul:nth-of-type(2) li{
-	height: 1.5rem;
-	padding-left: 0.3125rem;
 }
 
-footer svg:nth-of-type(3){
-	height: 1.5rem;
+footer section:nth-of-type(2) ul:nth-of-type(2) svg {
+	width:2.5em;
 }
 
-footer svg:nth-of-type(4){
-	height: 1.5rem;
-	
-}
-
-footer svg:nth-of-type(5){
-	height: 1.5rem;
-	padding-left: 0.3125rem;
-}
-
-footer svg:nth-of-type(6){
-	height: 1.5rem;
-	
-}
-
-footer svg:nth-of-type(7){
-	height: 1.5rem;
-	
-}
-
-footer svg:nth-of-type(8){
-	height: 1.5rem;
-}
-
-footer svg:nth-of-type(9){
-	height: 1.5rem;
-}
-
-footer svg:nth-of-type(10){
-	height: 1.5rem;
+/*************/
+/* copyright */
+footer section:nth-of-type(2) p {
+	padding: 0;
+	display: flex;
+	justify-content: center;
 }
