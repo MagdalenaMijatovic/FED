@@ -365,15 +365,17 @@ main section {
 	padding: 0rem;
 }
 
-/* text: behandelingen */
+/* text: treatments */
 main h2 {
 	font-family: 'basiccommericalNormal';
 	text-transform: uppercase;
-	font-size: 1rem;
+	font-size: 0.875rem;
 	align-items: center;
 	justify-content: center;
-	padding: 3.4375rem 0;
+	padding: 2.1875rem 0;
 	text-align: center;
+	letter-spacing: 0.125rem;
+	font-weight: 200;
 }
 
 /* first ul li */
@@ -397,6 +399,12 @@ main section:nth-of-type(1) ul li {
 	align-items: center;
 	height: 100%;
 	justify-content: space-between;
+}
+
+
+
+main section:nth-of-type(1) ul li h4{
+letter-spacing: 0.07rem;
 }
 
 main section ul li img {
@@ -438,13 +446,15 @@ main section:nth-of-type(1) ul li button:hover {
 h4 {
 	font-family: 'basiccommericalNormal';
 	text-transform: uppercase;
-	font-size: 0.8125ren;
+	font-size: 0.75rem;
 	padding: 1.09375rem 0 1.09375rem 0;
+	
+	
 }
 
 p {
 	font-family: 'basiccommericalNormal';
-	font-size: 0.875rem;
+	font-size: 0.8125rem;
 	padding: 0 0.625rem 1.09375rem 0.625rem;
 	letter-spacing: 0.01875rem;
 	line-height: 1.5;
@@ -475,6 +485,11 @@ main section h3 {
 	justify-content: center;
 	text-align: center;
 	padding-bottom: 1.09375rem;
+}
+
+main section:nth-last-of-type(2) p{
+
+min-width: 21.4375rem;
 }
 
 main section:nth-of-type(3) ul {
@@ -545,7 +560,9 @@ main section:nth-of-type(3) ul li button:hover {
 /*-----------------------------Footer-------------------------------*/
 /*------------------------------------------------------------------*/
 
-
+footer{
+	background-color: var(--color-grijs);
+}
 
 footer > section:nth-of-type(1) {
 	background-color: var(--color-grijs);
@@ -626,35 +643,33 @@ footer p a:hover {
 
 /* stijling onder de devider*/
 
-
-footer section:nth-of-type(2){
+footer section:nth-of-type(2) {
 	background-color: var(--color-grijs);
 	width: 100%;
-	padding: 1rem;
-	display: grid;
-	gap:1em;
+	padding: 1.875rem;
+	display: block; /* Gebruik flexbox voor layout */
 	justify-content: center;
 	align-items: center;
 	border-top: 0.1rem solid var(--color-divider);
-}
+  }
 
-
+/**********/
+/* VALUTA */
 select{
 	font-family: 'basiccommericalNormal';
 	text-transform: uppercase;
 	font-size: 0.875rem;
 	border: 0.05rem solid var(--color-divider);
-	/* background-color: var(--color-background); */
 	background-color: var(--color-background);
 	width: 5.26rem;
 	height: 2.175rem;
+	margin: 0 auto;
 	/**/
 	display:flex;
 	justify-content: center;
+	align-items: center;
 }
 
-
-/*  */
 footer section:nth-of-type(2) section{
 	display: block;
 	justify-content: center;
@@ -668,8 +683,8 @@ footer section:nth-of-type(2) section{
 footer section:nth-of-type(2) ul:nth-of-type(1) {
 	display: flex;
 	justify-content: center;
-	gap:.5em;
 	padding-left:0;
+	padding-top: 30px;
 }
 
 footer section:nth-of-type(2) ul:nth-of-type(1) li {
@@ -699,17 +714,92 @@ footer section:nth-of-type(2) ul:nth-of-type(2){
 	align-items: center;
 	gap:.25em;
 	padding-left:0;
+	padding-top: 1.875rem;
 
 }
 
 footer section:nth-of-type(2) ul:nth-of-type(2) svg {
-	width:2.5em;
+	width: 2.25rem;
 }
 
 /*************/
 /* copyright */
 footer section:nth-of-type(2) p {
-	padding: 0;
+	padding-top: 1.875rem;
 	display: flex;
 	justify-content: center;
+	font-size: 0.6875rem;
 }
+/************************************/
+/* footer op desktop weergave 750px */
+@media (min-width:46.875rem) {
+	footer > section:nth-of-type(1) {
+		max-width: 68.125rem;
+		padding-left: 3.4375rem;
+		padding-right: 3.4375rem;
+		padding-top: 4.375rem;
+		padding-bottom: 3.4375rem;
+		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(10.91875rem,11.06125rem ));
+		margin: 0 auto;
+	}
+
+
+	/* stijling van de links */
+footer nav{
+	padding-bottom: 5rem;
+	
+}
+
+
+/* stijling van de li */
+footer > section:nth-of-type(1) ul li {
+	list-style: none;
+	padding: 0.3125rem 0;
+}
+
+/* stijling onder de devider*/
+
+footer section:nth-of-type(2) {
+	max-width: 68.125rem;
+	padding-left: 3.4375rem;
+	padding-right: 3.4375rem;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(20.28125rem,34.0625rem));
+	margin: 0 auto;
+	justify-content:space-between;
+}
+
+/**********************/
+/*stijling BETALEN svg*/
+footer section:nth-of-type(2) ul:nth-of-type(2){
+	justify-content: start;
+	align-content: center;
+	padding: 1rem 0;
+}
+
+/*************/
+/* copyright */
+footer section:nth-of-type(2) p {
+	justify-content: flex-end;
+	align-content: center;
+	padding: 1rem 0;
+}
+
+/***********/
+/* SOCIALS */
+footer section:nth-of-type(2) ul:nth-of-type(1) {
+	justify-content: flex-end;
+	align-content: center;
+	padding: 1rem 0;
+}
+
+/**********/
+/* VALUTA */
+select{
+	justify-content: flex-start;
+
+
+
+}}

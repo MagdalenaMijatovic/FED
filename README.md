@@ -174,7 +174,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+ De site kan met tab genavigeerd worden. De kopjes kloppen en alle afbeeldingen hebben een alt tekst. De site is ook overzichtelijker gecodeerd dan de orginele site.
 
 </details>
 
@@ -233,13 +233,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
-
+Tijdens het coderen werken met kleuren om inzicht te krijgen wat je precies aanroept in css. Dit is super handig! Ook  het werken met grid was mij nog niet niet heel vetrouwd. Daar kon ik goed mee oefenen deze opdracht! Verder het maken van een responsive site in het algemeen had ik nog nooit gedaan. Ik vind het wel leuk om hier nog mee te oefenen
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Ik kreeg die select van de valuta's maar met geen mogelijkheid goed bij de mediaquery. Ook op de about pagina met de laatste section die een afbeelding als achtergond heeft mist een stukje wit aan het onderkant. Snap niet waarom het niet werkt. Ik heb een derde pagina toegevoegd om nog iets van javascript te doen maar had geen tijd om dat uitgebreid te doen. 
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>

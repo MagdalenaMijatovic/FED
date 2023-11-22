@@ -1,0 +1,652 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+}
+
+button,
+summary {
+    cursor: pointer;
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+/* fonts */
+@font-face {
+    font-family: 'basiccommericalItalic';
+    src: url('../fonts/basiccommercial_i4.1e3523a998a80ff2e6546b2cd001aec8a0856a1d.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'basiccommericalNormal';
+    src: url('../fonts/basiccommercial_n4.161334af349df25a2cfd2ef229e3fe638b6471c6.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'basiccommericalBold';
+    src: url('../fonts/basiccommercial_n7.58fc15bd5b52101eea961dd8bc6882e199098b2d.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'helveticaNormal';
+    src: url('../fonts/helvetica_n3.e01288c0d2e8e4f4101819b750499a38c41ed953.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'helveticaBold';
+    src: url('../fonts/helvetica_n4.fe093fe9ca22a15354813c912484945a36b79146.woff2') format('woff2');
+}
+
+:root {
+    /* LICHT THEMA */
+    /* voor de tekst */
+    --color-text: #111;
+
+    /* basiskleuren */
+    --color-wit: #f3f3f3;
+    --color-grijs: #ECEBE9;
+    --color-divider: #e2e2e2;
+
+    /* achtergrond kleur */
+    --color-background: #fff;
+
+    /* hoverkleuren van de buttons */
+    --color-hover-light-theme: #666666;
+
+}
+
+/********************/
+/* ALGEMENE STIJLEN */
+/********************/
+body {
+    margin: 0 auto;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+/*------------------------------------------------------------------*/
+/*----------------------------Header--------------------------------*/
+/*------------------------------------------------------------------*/
+
+
+/* navigatie, menu en aanbiedingsbalk */
+header section {
+    background-color: var(--color-background);
+    height: 3.9375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.9375rem;
+    border-bottom: 0.0625rem solid var(--color-divider);
+}
+
+/* flex grow zorgt ervoor dat het alle overige ruimte inneemt | > betekent alleen het directe kind */
+header section:first-of-type>a:first-child {
+    flex-grow: 1;
+}
+
+header section {
+    justify-content: center;
+}
+
+/* Grijze balk | Top van de pagina*/
+header p {
+    background-color: var(--color-grijs);
+    font-family: 'basiccommericalNormal';
+    top: 0;
+    width: 100%;
+    font-size: small;
+    line-height: 2em;
+    text-align: center;
+    justify-content: center;
+    padding: 0.6em;
+}
+
+/* logo browhouse */
+header img {
+    align-self: flex-start;
+    width: 10.3125rem;
+    height: auto;
+    padding-top: 0.5rem;
+}
+
+/* icoontjes | zoeken, account en winkelwagen */
+header nav:nth-of-type(2) ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0;
+    width: 7.395rem;
+    height: 2.60375rem;
+}
+
+/* icoontje | zoeken */
+header nav:nth-of-type(2) li:nth-of-type(1) {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.60375rem;
+    width: 2.1875rem;
+}
+
+/* icoontje | account */
+header nav:nth-of-type(2) li:nth-of-type(2) {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.60375rem;
+    width: 2.625rem;
+}
+
+/* icoontje | winkelwagen */
+header nav:nth-of-type(2) li:nth-of-type(3) {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.60375rem;
+    width: 2.625rem;
+}
+
+/* Eerste SVG-icoon */
+nav ul li:nth-of-type(1) a svg {
+    width: 1.1075rem;
+    height: 1.108125rem;
+    display: flex;
+    /* Nodig om SVG te centreren */
+    align-items: center;
+    /* Verticale uitlijning in het midden */
+    justify-content: center;
+    /* Horizontale uitlijning in het midden */
+}
+
+/* Tweede SVG-icoon */
+nav ul li:nth-of-type(2) a svg {
+    width: 0.94rem;
+    height: 1.25rem;
+    display: flex;
+    /* Nodig om SVG te centreren */
+    align-items: center;
+    /* Verticale uitlijning in het midden */
+    justify-content: center;
+    /* Horizontale uitlijning in het midden */
+}
+
+/* Derde SVG-icoon */
+nav ul li:nth-of-type(3) a svg {
+    width: 1.126875rem;
+    height: 1.19375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* hamburger menu */
+header button:nth-of-type(1) {
+    /* Zorgt ervoor dat de button aan de rechterkant staat */
+    margin-left: 0;
+    /* Plaats de button aan de rechterkant */
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 2.625rem;
+    height: 2.60375rem;
+}
+
+/* hamburger svg */
+header button:nth-of-type(1) svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* kruisje menu */
+header button:nth-of-type(2) {
+    margin-left: 0;
+    background: none;
+    padding: 10px 11px;
+    border: none;
+    cursor: pointer;
+    width: 2.625rem;
+    height: 2.60375rem;
+    display: none;
+}
+
+/* kruisje svg */
+header button:nth-of-type(2) svg {
+    width: 1.2475rem;
+    height: 1.24625rem;
+}
+
+header nav:nth-of-type(2) {
+    display: flex;
+}
+
+/* menu mobiele weergave */
+header nav:nth-of-type(1) {
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 6.536875rem;
+    width: 100%;
+    background-color: var(--color-background);
+    transform: translateX(-100%);
+}
+
+
+header nav:nth-of-type(1) ul {
+    padding: 0;
+    display: block;
+    justify-content: flex-start;
+}
+
+header nav:nth-of-type(1) li {
+    list-style: none;
+    text-align: start;
+}
+
+header nav:nth-of-type(1) ul li a {
+    font-family: 'basiccommericalNormal';
+    font-size: 0.875rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
+    display: block;
+    font-family: 'basiccommericalNormal';
+    border-bottom: solid 1px var(--color-divider);
+    color: var(--color-text);
+}
+
+header nav:nth-of-type(1) ul li a:hover {
+    color: var(--color-hover-light-theme);
+}
+
+header nav:nth-of-type(1) ul li a.active {
+    text-decoration: underline;
+}
+
+
+/* als er op de menubutton gedrukt wordt verplaatst het verborgen gedeelte op het scherm (van links naar rechts) (mobiele weergave) */
+header nav:nth-of-type(1).actief {
+    transform: translateX(0%);
+}
+
+/* navigatie op desktop weergave 750px */
+@media (min-width:46.875rem) {
+
+    header button:nth-of-type(1) {
+        display: none;
+    }
+
+    header button:nth-of-type(2) {
+        display: none;
+    }
+
+    header section {
+        background-color: var(--color-background);
+        height: 6.3125rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3.4375rem;
+        border-bottom: 0.0625rem solid var(--color-divider);
+    }
+
+
+    header nav:nth-of-type(1) {
+        display: flex;
+        position: static;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-width: 19.78125rem;
+        margin: 0;
+        background-color: none;
+        transform: translateX(0);
+        padding: 0 2.8525rem;
+    }
+
+
+    header nav:nth-of-type(1) ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0rem 0rem;
+        height: auto;
+        margin: 0;
+        background-color: none;
+    }
+
+    header nav:nth-of-type(1) ul li a {
+        font-family: 'basiccommericalNormal';
+        font-size: 0.8125rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 0.1875rem 0.625rem;
+        display: block;
+        font-family: 'basiccommericalNormal';
+        border: none;
+        color: var(--color-text);
+    }
+
+    header nav:nth-of-type(1) ul li a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (min-width:56.4375rem) {
+    header section {
+        height: 4.71875rem;
+
+    }
+}
+
+/*------------------------------------------------------------------*/
+/*-------------------------Einde-Header-----------------------------*/
+/*------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------*/
+/*-----------------------------Main---------------------------------*/
+/*------------------------------------------------------------------*/
+main section {
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+main section h2{
+    font-family: 'basiccommericalNormal';
+    text-transform: uppercase;
+    font-size: larger;
+    padding-top: 3rem;
+    font-weight: bolder;
+    display: flex;
+
+} 
+
+main section > section{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    height: 10rem;
+    
+}
+
+
+
+
+main section img{
+    width:40rem;
+    padding-top: 30px;
+}
+
+
+/*------------------------------------------------------------------*/
+/*-----------------------------Footer-------------------------------*/
+/*------------------------------------------------------------------*/
+
+footer {
+    background-color: var(--color-grijs);
+}
+
+footer>section:nth-of-type(1) {
+    background-color: var(--color-grijs);
+    color: var(--color-text);
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 2.8125rem;
+    padding-bottom: 3.4375rem;
+}
+
+/* stijling van de links */
+footer nav {
+    padding-bottom: 12.65625rem;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: 'basiccommericalNormal';
+    font-size: 0.875rem;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+    color: var(--color-hover-light-theme);
+}
+
+footer>section:nth-of-type(1) ul {
+    padding: 0;
+    display: block;
+    background-color: none;
+    justify-content: flex-start;
+    width: fit-content;
+}
+
+/* stijling van de li */
+footer>section:nth-of-type(1) ul li {
+    list-style: none;
+    padding: 0.9375rem 0;
+    display: block;
+
+}
+
+
+/* Stijling "contact""*/
+footer>section:nth-child(2) {
+    display: block;
+    justify-content: flex-start;
+    width: fit-content;
+    padding: 0;
+}
+
+h5 {
+    font-family: 'basiccommericalNormal';
+    font-size: 0.75rem;
+    padding-bottom: 1.21525rem;
+}
+
+footer section p {
+    font-family: 'basiccommericalNormal';
+    font-size: 0.8125rem;
+    padding-left: 0;
+}
+
+/* ruimte tussen het 2e blokje en 3e blokje*/
+
+
+footer p a {
+    text-decoration: none;
+    color: var(--color-text)
+}
+
+footer p a:hover {
+    text-decoration: underline;
+    color: var(--color-hover-light-theme);
+}
+
+/* stijling onder de devider*/
+
+footer section:nth-of-type(2) {
+    background-color: var(--color-grijs);
+    width: 100%;
+    padding: 1.875rem;
+    display: block;
+    /* Gebruik flexbox voor layout */
+    justify-content: center;
+    align-items: center;
+    border-top: 0.1rem solid var(--color-divider);
+}
+
+/**********/
+/* VALUTA */
+select {
+    font-family: 'basiccommericalNormal';
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    border: 0.05rem solid var(--color-divider);
+    background-color: var(--color-background);
+    width: 5.26rem;
+    height: 2.175rem;
+    margin: 0 auto;
+    /**/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer section:nth-of-type(2) section {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+
+
+/***********/
+/* SOCIALS */
+footer section:nth-of-type(2) ul:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    padding-top: 30px;
+}
+
+footer section:nth-of-type(2) ul:nth-of-type(1) li {
+    width: fit-content;
+    list-style: none;
+}
+
+footer section:nth-of-type(2) ul:nth-of-type(1) li a {
+    width: 3em;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+}
+
+/*stijling socials svg*/
+footer section:nth-of-type(2) ul:nth-of-type(1) li svg {
+    width: 50%;
+}
+
+
+/**********************/
+/*stijling BETALEN svg*/
+footer section:nth-of-type(2) ul:nth-of-type(2) {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .25em;
+    padding-left: 0;
+    padding-top: 1.875rem;
+
+}
+
+footer section:nth-of-type(2) ul:nth-of-type(2) svg {
+    width: 2.25rem;
+}
+
+/*************/
+/* copyright */
+footer section:nth-of-type(2) p {
+    padding-top: 1.875rem;
+    display: flex;
+    justify-content: center;
+    font-size: 0.6875rem;
+}
+
+/************************************/
+/* footer op desktop weergave 750px */
+@media (min-width:46.875rem) {
+    footer>section:nth-of-type(1) {
+        max-width: 68.125rem;
+        padding-left: 3.4375rem;
+        padding-right: 3.4375rem;
+        padding-top: 4.375rem;
+        padding-bottom: 3.4375rem;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(10.91875rem, 11.06125rem));
+        margin: 0 auto;
+    }
+
+
+    /* stijling van de links */
+    footer nav {
+        padding-bottom: 5rem;
+
+    }
+
+
+    /* stijling van de li */
+    footer>section:nth-of-type(1) ul li {
+        list-style: none;
+        padding: 0.3125rem 0;
+    }
+
+    /* stijling onder de devider*/
+
+    footer section:nth-of-type(2) {
+        max-width: 68.125rem;
+        padding-left: 3.4375rem;
+        padding-right: 3.4375rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(20.28125rem, 34.0625rem));
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    /**********************/
+    /*stijling BETALEN svg*/
+    footer section:nth-of-type(2) ul:nth-of-type(2) {
+        justify-content: start;
+        align-content: center;
+        padding: 1rem 0;
+    }
+
+    /*************/
+    /* copyright */
+    footer section:nth-of-type(2) p {
+        justify-content: flex-end;
+        align-content: center;
+        padding: 1rem 0;
+    }
+
+    /***********/
+    /* SOCIALS */
+    footer section:nth-of-type(2) ul:nth-of-type(1) {
+        justify-content: flex-end;
+        align-content: center;
+        padding: 1rem 0;
+    }
+
+    /**********/
+    /* VALUTA */
+    select {
+        justify-content: flex-start;
+
+
+
+    }
+}
